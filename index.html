@@ -41,24 +41,6 @@
         color: #ff9fbf;
         max-width: 800px;
       }
-
-      .music-btn {
-        margin-top: 70px;
-        padding: 25px 60px;
-        font-size: 45px;
-        color: white;
-        background: #e75480;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 0 15px #e75480;
-      }
-
-      .music-btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px #ff99b5;
-      }
     </style>
   </head>
   <body>
@@ -86,31 +68,9 @@
       и счастливее 💞
     </div>
 
-    <button class="music-btn" id="playBtn">▶</button>
-
     <script>
       const startDate = new Date("2025-07-12T00:10:00+03:00");
       const audio = document.getElementById("myAudio");
-      const playBtn = document.getElementById("playBtn");
-
-      let isPlaying = false;
-
-      playBtn.addEventListener("click", () => {
-        if (!isPlaying) {
-          audio.volume = 0.1;
-          audio.play();
-          playBtn.textContent = "💗Я думаю, ЭТО - наша песня💗";
-          playBtn.style.boxShadow = "0 0 35px #ff9fbf";
-          playBtn.style.background = "#ff80a3";
-          isPlaying = true;
-        } else {
-          audio.pause();
-          playBtn.textContent = "▶ ";
-          playBtn.style.boxShadow = "0 0 15px #e75480";
-          playBtn.style.background = "#e75480";
-          isPlaying = false;
-        }
-      });
 
       function updateTimer() {
         const now = new Date();
